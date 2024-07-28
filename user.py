@@ -125,6 +125,12 @@ columns = (
 #CURD => Create , Read , Update , Delete
 #git config --global user.name "Susan Nagarkoti"
 #git config --global user.email "sushanu2017@gmail.com"
+#git init
+
+#git add .
+# git commit -m "commit message"
+#git push origin
+
 
 def main():
     con =  create_connection()
