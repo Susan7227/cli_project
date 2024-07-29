@@ -97,16 +97,17 @@ def select_user_by_id(con,user_id):
         print(user)
 
 def delete_users(con):
-    cur =con.cursor()
+    cur = con.cursor()
     cur.execute("delete from users;")
     con.commit
     print("all users are deleted successfully.")
 
-def delete_user_by_id(con):
+def delete_user_by_id(con, user_id):
     cur = con.cursor()
-    cur.execute ("delete from users where id = ?;", (user_id,))
+    cur.execute ("delete from users where id = ?", (user_id,))
     con.commit()
     print(f"user with id [{user_id}] was successfully deleted.")
+
 
 columns = (
     "first_name",
@@ -198,4 +199,6 @@ def update_user_by_id(con,user_id,column_name,column_value):
     )
 
 main()
+
+
 
